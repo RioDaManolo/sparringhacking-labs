@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block titulo %}Perfil &middot; Instituto TecnoSur{% endblock %}
+{% block contenido %}
+<div class="tarjeta tarjeta-ancha">
+  <div class="perfil-encabezado">
+    <h1>Perfil N&deg;{{ id }}</h1>
+    {% if propio %}<span class="badge badge-propio">Tu perfil</span>{% endif %}
+    {% if es_admin %}<span class="badge badge-admin">Administración</span>{% endif %}
+  </div>
+  <p class="subtitulo">Portal de Alumnos</p>
+
+  <dl class="datos-perfil">
+    <dt>Nombre</dt><dd>{{ persona.nombre }}</dd>
+    <dt>Carrera</dt><dd>{{ persona.carrera }}</dd>
+    <dt>Nivel</dt><dd>{{ persona.nivel }}</dd>
+  </dl>
+
+  {% if es_admin %}
+  <div class="aviso-exito">
+    <p>Panel de administración. Esa es la flag del laboratorio:</p>
+    <code class="flag">{{ flag }}</code>
+  </div>
+  {% endif %}
+
+  <p><a href="{{ url_for('logout') }}">Cerrar sesión</a></p>
+</div>
+{% endblock %}

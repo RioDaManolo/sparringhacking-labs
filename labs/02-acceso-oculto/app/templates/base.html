@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>{% block titulo %}Instituto TecnoSur{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-logo">
+      <span class="logo-icono">TS</span>
+      <span>Instituto TecnoSur &middot; Eventos</span>
+    </div>
+  </header>
+  <main class="contenido">
+    {% block contenido %}{% endblock %}
+  </main>
+  <footer class="pie">Instituto TecnoSur &middot; Laboratorio de practica SparringHacking</footer>
+  <!-- TODO: quitar este enlace antes de pasar a produccion: /panel-interno-2024 -->
+</body>
+</html>

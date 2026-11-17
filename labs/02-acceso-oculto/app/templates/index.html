@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %}Eventos &middot; Instituto TecnoSur{% endblock %}
+{% block contenido %}
+<div class="tarjeta tarjeta-ancha">
+  <h1>Proximos eventos</h1>
+  <p class="subtitulo">Instituto TecnoSur</p>
+
+  <ul class="lista-cursos">
+    {% for evento in eventos %}
+    <li class="resultado-curso">
+      <strong>{{ evento.nombre }}</strong>
+      <span>{{ evento.fecha }} &middot; {{ evento.lugar }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

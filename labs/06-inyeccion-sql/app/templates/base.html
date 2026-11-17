@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>{% block titulo %}Instituto TecnoSur{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-logo">
+      <span class="logo-icono">TS</span>
+      <span>Instituto TecnoSur &middot; Catálogo de Cursos</span>
+    </div>
+    {% block nav %}{% endblock %}
+  </header>
+  <main class="contenido">
+    {% block contenido %}{% endblock %}
+  </main>
+  <footer class="pie">
+    SparringHacking &middot; Laboratorio de entrenamiento &middot; Entorno aislado, sin datos reales
+  </footer>
+</body>
+</html>

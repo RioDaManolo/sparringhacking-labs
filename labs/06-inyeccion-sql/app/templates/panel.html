@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Panel coordinador &middot; Instituto TecnoSur{% endblock %}
+{% block nav %}
+<a class="enlace-nav" href="{{ url_for('logout') }}">Cerrar sesión</a>
+{% endblock %}
+{% block contenido %}
+<div class="tarjeta tarjeta-ancha">
+  <h1>Bienvenido/a, {{ nombre }}</h1>
+  <p class="subtitulo">Panel de coordinación &middot; Catálogo de Cursos</p>
+
+  <div class="aviso-exito">
+    <p>Lograste entrar al panel. Esa es la flag del laboratorio:</p>
+    <code class="flag">{{ flag }}</code>
+  </div>
+</div>
+{% endblock %}

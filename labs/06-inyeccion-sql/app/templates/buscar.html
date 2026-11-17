@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %}Catálogo de Cursos &middot; Instituto TecnoSur{% endblock %}
+{% block nav %}
+<a class="enlace-nav" href="{{ url_for('login') }}">Acceso coordinadores</a>
+{% endblock %}
+{% block contenido %}
+<div class="tarjeta tarjeta-ancha">
+  <h1>Catálogo de Cursos</h1>
+  <p class="subtitulo">Busca por nombre de curso</p>
+
+  <form method="get" action="{{ url_for('buscar') }}" class="form-busqueda">
+    <input type="text" name="texto" value="{{ texto }}" placeholder="Ej: Redes, Linux, Python..." autocomplete="off">
+    <button type="submit">Buscar</button>
+  </form>
+
+  {% if error %}
+  <div class="aviso-error">
+    <strong>Error en la búsqueda:</strong><br>{{ error }}
+  </div>
+  {% elif texto and not resultados %}
+  <p class="sin-resultados">No se encontraron cursos para "{{ texto }}".</p>
+  {% endif %}
+
+  {% if resultados %}
+  <ul class="lista-cursos">
+    {% for fila in resultados %}
+    <li class="resultado-curso">
+      <strong>{{ fila[1] }}</strong>
+      <span>{{ fila[2] }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</div>
+{% endblock %}

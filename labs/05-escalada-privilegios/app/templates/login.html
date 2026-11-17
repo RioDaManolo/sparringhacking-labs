@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block titulo %}Ingresar &middot; Instituto TecnoSur{% endblock %}
+{% block contenido %}
+<div class="tarjeta">
+  <h1>Portal de Alumnos</h1>
+  <p class="subtitulo">Acceso para estudiantes</p>
+
+  <div class="aviso-info">
+    Cuenta de alumno para este laboratorio:<br>
+    usuario <code>{{ usuario_demo }}</code> &middot; clave <code>{{ clave_demo }}</code>
+  </div>
+
+  {% if error %}
+  <div class="aviso-error">{{ error }}</div>
+  {% endif %}
+
+  <form method="post" action="{{ url_for('login') }}">
+    <label for="usuario">Usuario</label>
+    <input type="text" id="usuario" name="usuario" autocomplete="off" required>
+
+    <label for="clave">Contraseña</label>
+    <input type="password" id="clave" name="clave" required>
+
+    <button type="submit">Ingresar</button>
+  </form>
+</div>
+{% endblock %}

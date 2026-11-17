@@ -1,0 +1,8 @@
+Notas viejas, borrar despues.
+
+Prueba de formato de flag (esto NO es una flag valida, falta el formato correcto):
+flag{esto-no-sirve-es-solo-un-ejemplo}
+
+Recuerda: una flag real de SparringHacking siempre tiene la forma SH{...}
+con 32 caracteres hexadecimales dentro de las llaves. Si encuentras algo que
+no cumple ese formato, sigue buscando.

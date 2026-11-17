@@ -1,0 +1,11 @@
+Bienvenido/a al servidor de practica del Instituto TecnoSur.
+
+Este servidor no tiene ninguna contrasena que adivinar: ya iniciaste sesion.
+El objetivo es otro: encontrar un archivo llamado flag.txt que esta en algun
+lugar del sistema al que SI tienes acceso de lectura, aunque no este en tu
+carpeta personal.
+
+Algunas ideas para orientarte (no son la solucion, son tecnicas de repaso):
+- Revisa que otras tareas programadas tienes configuradas.
+- Revisa el contenido de los scripts a los que tengas acceso de lectura.
+- No todo lo que empieza con "flag" en este servidor es la flag real.

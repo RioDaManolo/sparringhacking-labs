@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block titulo %}Panel interno &middot; Instituto TecnoSur{% endblock %}
+{% block contenido %}
+<div class="tarjeta tarjeta-ancha">
+  <h1>Panel interno</h1>
+  <p class="subtitulo">Esta pagina no deberia ser publica</p>
+
+  <div class="aviso-exito">
+    <p>Llegaste a una pagina que no esta enlazada en el sitio ni pide sesion. Esa es la flag:</p>
+    <code class="flag">{{ flag }}</code>
+  </div>
+</div>
+{% endblock %}
